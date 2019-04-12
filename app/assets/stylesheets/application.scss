@@ -6,11 +6,11 @@
 
 body {
   .wrapper {
-    .chat--side{
+    .chat-side{
       width: 300px;
       color: white;
       float: left;
-      .side--header{
+      .side-header{
         background-color: #253141;
         height: 100px;
         width: 100%;
@@ -20,13 +20,13 @@ body {
         justify-content: space-between;
         font-weight: bold;
         box-sizing: border-box;
-        .user--menu{
+        &__user-menu{
           display: flex;
           text-decoration: none;
-          .user--menu__edit--user{
+          &__edit-user{
             margin-left: 0.3rem;
           }
-          .user--menu__new--group{
+          &__new-group{
             margin-left: 0.3rem;
           }
         }
@@ -38,11 +38,11 @@ body {
           overflow: scroll;
           .group{
             margin-bottom: 40px;
-            .group__group--name{
+            &__group-name{
               margin-bottom: 5px;
               font-size: 15px;
             }
-            .group__latest--message{
+            &__latest-message{
               font-size: 11px;
             }
           }
