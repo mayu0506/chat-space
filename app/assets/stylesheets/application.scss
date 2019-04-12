@@ -1,6 +1,9 @@
 @import "./reset";
 // リセットCSS
 
+@import "font-awesome";
+// Font Awesomeを導入
+
 body {
   .wrapper {
     .chat--side{
@@ -17,12 +20,32 @@ body {
         justify-content: space-between;
         font-weight: bold;
         box-sizing: border-box;
+        .user--menu{
+          display: flex;
+          text-decoration: none;
+          .user--menu__edit--user{
+            margin-left: 0.3rem;
+          }
+          .user--menu__new--group{
+            margin-left: 0.3rem;
+          }
+        }
       }
       .groups{
           background-color: #2f3e51;
           padding: 20px 20px 0;
           height: calc(100vh - 100px);
           overflow: scroll;
+          .group{
+            margin-bottom: 40px;
+            .group__group--name{
+              margin-bottom: 5px;
+              font-size: 15px;
+            }
+            .group__latest--message{
+              font-size: 11px;
+            }
+          }
       }
     }
   }

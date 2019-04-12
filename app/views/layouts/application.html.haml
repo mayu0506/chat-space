@@ -10,5 +10,17 @@
     .wrapper
       .chat--side
         .side--header
+          %p.side--header__user--name sao
+          %ul.user--menu
+            %li.user--menu__edit--user
+              %a:before{href:'/groups/new'}
+                %i.fa.fa-edit
+            %li.user--menu__new--group
+              %a:before{href:'/users/id/edit'}
+                %i.fa.fa-cog
         .groups
+          .group
+            %p.group__group--name sample
+            %p.group__latest--message Good bye world!
+
 
