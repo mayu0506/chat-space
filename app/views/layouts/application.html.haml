@@ -8,7 +8,19 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .wrapper
-      .chat--side
-        .side--header
+      .chat-side
+        .side-header
+          %p.side-header__user-name sao
+          %ul.side-header__user-menu
+            %li.side-header__user-menu__edit-user
+              %a:before{href:'/groups/new'}
+                %i.fa.fa-edit
+            %li.side-header__user-menu__new-group
+              %a:before{href:'/users/id/edit'}
+                %i.fa.fa-cog
         .groups
+          .group
+            %p.group__group-name sample
+            %p.group__latest-message Good bye world!
+
 
