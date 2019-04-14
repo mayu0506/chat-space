@@ -7,8 +7,9 @@
         %ul.current-group__member-list 
           Member：
           %li.current-group__member-list__member seo neko
-      %a{href:'/groups/id/edit'}
+      = link_to 'Edit', :controller => 'groups', :action => 'edit' do
         .main-header__edit-btn Edit
     .messages
+      = render 'groups/messages'
     .form
 
