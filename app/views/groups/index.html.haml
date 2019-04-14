@@ -1,15 +1,14 @@
-.wrapper
-  .chat-main
-    -# 右側チャットメイン画面のグループ名部分
-    .main-header
-      .current-group
-        %h2.current-group__name sample
-        %ul.current-group__member-list 
-          Member：
-          %li.current-group__member-list__member seo neko
-      = link_to 'Edit', :controller => 'groups', :action => 'edit' do
-        .main-header__edit-btn Edit
-    .messages
-      = render 'groups/messages'
-    .form
+.chat-main
+  -# 右側チャットメイン画面のグループ名部分
+  .main-header
+    .current-group
+      %h2.current-group__name sample
+      %ul.current-group__member-list 
+        Member：
+        %li.current-group__member-list__member seo neko
+    = link_to 'Edit', :controller => 'groups', :action => 'edit' do
+      .main-header__edit-btn Edit
+  .messages
+    = render 'groups/messages'
+
 
