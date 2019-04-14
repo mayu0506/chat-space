@@ -10,5 +10,13 @@
       .main-header__edit-btn Edit
   .messages
     = render 'groups/messages'
+  .form
+    -# formタグになっていないのは仮組みだから？
+    .new-message
+      .input-box
+        %input{type: "text", class:"input-box__text", placeholder: "type a message"}
+        %label.image-label
+          %i.fa.fa-image
+      %input{type:"submit", value:"Send", class:"new-message__submit-btn"}
 
 
