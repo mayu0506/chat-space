@@ -23,19 +23,9 @@
           .group
             %p.group__group-name sample
             %p.group__latest-message Good bye world!
+  = yield 
 
-      -# 右側メインチャット画面
-      .chat-main
-        .main-header
-          .current-group
-            %h2.current-group__name sample
-            %ul.current-group__member-list 
-              Member：
-              %li.current-group__member-list__member seo neko
-          %a{href:'/groups/id/edit'}
-            .main-header__edit-btn Edit
-        .messages
-        .form
+
 
 
 
