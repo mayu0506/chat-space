@@ -1,22 +1,40 @@
-.chat-main
-  -# 右側チャットメイン画面のグループ名部分
-  .main-header
-    .current-group
-      %h2.current-group__name sample
-      %ul.current-group__member-list 
-        Member：
-        %li.current-group__member-list__member seo neko
-    = link_to 'Edit', :controller => 'groups', :action => 'edit' do
-      .main-header__edit-btn Edit
-  .messages
-    = render 'groups/messages'
-  .form
-    -# formタグになっていないのは仮組みだから？
-    .new-message
-      .input-box
-        %input{type: "text", class:"input-box__text", placeholder: "type a message"}
-        %label.image-label
-          %i.fa.fa-image
-      %input{type:"submit", value:"Send", class:"new-message__submit-btn"}
+.wrapper
+  -# 左側チャットメニュー画面
+  .chat-side
+    .side-header
+      %p.side-header__user-name
+        =current_user.name
+      %ul.side-header__user-menu
+        %li.side-header__user-menu__edit-user
+          %a{href:'/groups/new'}
+            %i.fa.fa-edit
+        %li.side-header__user-menu__new-group
+          %a{href:'/users/id/edit'}
+            %i.fa.fa-cog
+    .groups
+      .group
+        %p.group__group-name sample
+        %p.group__latest-message Good bye world!
+
+  .chat-main
+    -# 右側チャットメイン画面のグループ名部分
+    .main-header
+      .current-group
+        %h2.current-group__name sample
+        %ul.current-group__member-list 
+          Member：
+          %li.current-group__member-list__member seo neko
+      = link_to 'Edit', :controller => 'groups', :action => 'edit' do
+        .main-header__edit-btn Edit
+    .messages
+      = render 'groups/messages'
+    .form
+      -# formタグになっていないのは仮組みだから？
+      .new-message
+        .input-box
+          %input{type: "text", class:"input-box__text", placeholder: "type a message"}
+          %label.image-label
+            %i.fa.fa-image
+        %input{type:"submit", value:"Send", class:"new-message__submit-btn"}
 
 

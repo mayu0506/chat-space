@@ -3,9 +3,17 @@
  *= require_self
  */
 
- @import "./reset";
+@import "./reset";
 // リセットCSS
 
 @import "font-awesome";
 // Font Awesomeを導入
 
+@import "./config/colors.scss";
+// user カラーの設定
+
+@import "./user.scss";
+// user ユーザー管理機能のCSS
+
+@import "./modules/flash.scss";
+// フラッシュメッセージの設定
