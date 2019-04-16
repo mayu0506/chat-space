@@ -6,10 +6,10 @@
         =current_user.name
       %ul.side-header__user-menu
         %li.side-header__user-menu__edit-user
-          %a{href:'/groups/new'}
+          =link_to edit_user_path(current_user) do
             %i.fa.fa-edit.fa-white
         %li.side-header__user-menu__new-group
-          %a{href:'/users/id/edit'}
+          =link_to new_group_path do
             %i.fa.fa-cog.fa-white
     .groups
       .group
