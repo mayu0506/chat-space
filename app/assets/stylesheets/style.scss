@@ -3,6 +3,7 @@ html{
 
   *,*:before,*:after{
     box-sizing: inherit;
+    text-decoration: none;
   }
 }
 
@@ -44,10 +45,12 @@ body {
           .group{
             margin-bottom: 40px;
             &__group-name{
+              color: white;
               margin-bottom: 5px;
               font-size: 15px;
             }
             &__latest-message{
+              color: white;
               font-size: 11px;
             }
           }
