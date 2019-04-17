@@ -4,10 +4,13 @@
     -# 右側チャットメイン画面のグループ名部分
     .main-header
       .current-group
-        %h2.current-group__name sample
+        %h2.current-group__name
+          = @group.name
         %ul.current-group__member-list 
           Member：
-          %li.current-group__member-list__member seo neko
+          %li.current-group__member-list__member
+            - @group.users.each do |user|
+              = user.name
       = link_to 'edit', :controller => 'groups', :action => 'edit' do
         .main-header__edit-btn Edit
     .messages
